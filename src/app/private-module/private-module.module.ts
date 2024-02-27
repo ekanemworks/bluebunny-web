@@ -9,6 +9,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { PreferenceComponent } from './preference/preference.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { EventsComponent } from './events/events.component';
+import { PrivateModuleRoutingModule } from './private-module-routing';
 
 
 
@@ -26,7 +27,8 @@ import { EventsComponent } from './events/events.component';
     
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrivateModuleRoutingModule
   ]
 })
 export class PrivateModuleModule { }
