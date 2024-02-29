@@ -11,6 +11,10 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 import { EventsComponent } from './events/events.component';
 import { PrivateModuleRoutingModule } from './private-module-routing';
 import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DemoNgZorroAntdModule } from '../shared/ng-zorro-antd.module';
+import { SidebarComponent } from '../components/sidebar/sidebar.component';
 
 
 
@@ -25,11 +29,16 @@ import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
     PreferenceComponent,
     SubscriptionComponent,
     EventsComponent,
-    NavBarComponent
+    NavBarComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
-    PrivateModuleRoutingModule
+    PrivateModuleRoutingModule,
+    DemoNgZorroAntdModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ]
 })
 export class PrivateModuleModule { }
