@@ -10,6 +10,7 @@ import { PreferenceComponent } from './preference/preference.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { EventsComponent } from './events/events.component';
 import { PrivateModuleRoutingModule } from './private-module-routing';
+import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 
 
 
@@ -24,7 +25,7 @@ import { PrivateModuleRoutingModule } from './private-module-routing';
     PreferenceComponent,
     SubscriptionComponent,
     EventsComponent,
-    
+    NavBarComponent
   ],
   imports: [
     CommonModule,

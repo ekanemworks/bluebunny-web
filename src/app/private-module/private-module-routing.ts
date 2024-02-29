@@ -12,17 +12,19 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 
 
 const routes: Routes = [
-  {path: '', component: PrivateModuleComponent, children:[
-    {path:'', redirectTo: '/home', pathMatch: 'full'},
-    {path:'home', component: DashboardComponent,},
-    {path:'verify-email', component: EmailVerificationComponent,},
-    {path:'events', component: EventsComponent,},
-    {path:'match-making', component: MatchMakingComponent,},
-    {path:'messages', component: MessagesComponent,},
-    {path:'preference', component: PreferenceComponent,},
-    {path:'setup', component: SetupComponent,},
-    {path:'subscription', component: SubscriptionComponent,},
-  ]}
+    // {path: '', component: PrivateModuleComponent}
+    {path: '', component: PrivateModuleComponent, children:[
+        {path:'', redirectTo: '/account/home', pathMatch: 'full'},
+        {path:'home', component: DashboardComponent},
+        {path:'verify-email', component: EmailVerificationComponent,},
+        {path:'events', component: EventsComponent,},
+        {path:'match-making', component: MatchMakingComponent,},
+        {path:'messages', component: MessagesComponent,},
+        {path:'preference', component: PreferenceComponent,},
+        {path:'setup', component: SetupComponent,},
+        {path:'subscription', component: SubscriptionComponent,},
+    ]
+    }
 ];
 
 @NgModule({
