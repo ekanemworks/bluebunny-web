@@ -1,1 +1,28 @@
-<p>nav-bar works!</p>
+<main style="text-align: center; font-size: 12px;">
+    <div nz-row>
+        <div nz-col [nzSpan]="6" nzMatchRouter  routerLink="account/home" class="nav-btn">
+            <div>
+                <span nz-icon nzType="ungroup" nzTheme="outline" class="nav-bar-icon"></span>
+            </div>
+            Matching
+        </div>
+        <div nz-col [nzSpan]="6" routerLink="/users/my-bookmarks" class="nav-btn">
+            <div>
+                <span nz-icon nzType="search" nzTheme="outline" class="nav-bar-icon"></span>
+            </div>
+            Search
+        </div>
+        <div nz-col [nzSpan]="6" routerLink="/users/my-bookmarks" class="nav-btn">
+            <div>
+                <span nz-icon nzType="message" nzTheme="outline" class="nav-bar-icon"></span>
+            </div>
+            Messages
+        </div>
+        <div nz-col [nzSpan]="6" routerLink="/users/my-bookmarks" class="nav-btn">
+            <div>
+                <span nz-icon nzType="thunderbolt" nzTheme="outline" class="nav-bar-icon"></span>
+            </div>
+            Subscription
+        </div>
+    </div>
+</main>

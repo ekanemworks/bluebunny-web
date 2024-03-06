@@ -1,0 +1,18 @@
+
+.nav-btn{
+    padding-inline: 20px;
+    padding-block: 15px;
+    cursor: pointer;
+    font-size: 14px;
+
+    .nav-bar-icon{
+        font-size: 15px;
+    }
+}
+
+
+.nav-btn:hover{
+    background-color:#eee !important;
+    padding-inline: 20px;
+    padding-block: 15px;
+}

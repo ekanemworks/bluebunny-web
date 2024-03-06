@@ -1,27 +1,13 @@
-<main style="padding: 15px; border: 1px solid #ddd; height: 100%;">
+<main style="height: 100%;">
     <div style="width: 70px; border: 1px solid #ddd; height: 70px; margin: auto;">
         img
     </div>
 
     <div>
-        <div>
-            Matching
+        <div nzMatchRouter  routerLink="account/home" class="nav-btn" *ngFor="let data of appResource">
+            <span nz-icon [nzType]="data.icon" nzTheme="outline" class="nav-bar-icon"></span> 
+            &nbsp;&nbsp;{{data.name}}
         </div>
-        <div>
-            Search
-        </div>
-        <div>
-            Messages
-        </div>
-        <div>
-            Events
-        </div>
-        <div>
-            Subscription
-        </div>
-        <div>
-            Settings
-        </div>
-    </div>
+    </div>  
 
 </main>

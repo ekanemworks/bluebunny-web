@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DemoNgZorroAntdModule } from '../shared/ng-zorro-antd.module';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
+import { AdsBarComponent } from '../components/ads-bar/ads-bar.component';
 
 
 
@@ -30,7 +31,8 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
     SubscriptionComponent,
     EventsComponent,
     NavBarComponent,
-    SidebarComponent
+    SidebarComponent,
+    AdsBarComponent
   ],
   imports: [
     CommonModule,
