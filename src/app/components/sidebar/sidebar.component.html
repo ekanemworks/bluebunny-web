@@ -4,7 +4,7 @@
     </div>
 
     <div>
-        <div nzMatchRouter  routerLink="account/home" class="nav-btn" *ngFor="let data of appResource">
+        <div *ngFor="let data of appResource" nzMatchRouter  [routerLink]="data.route" class="nav-btn" >
             <span nz-icon [nzType]="data.icon" nzTheme="outline" class="nav-bar-icon"></span> 
             &nbsp;&nbsp;{{data.name}}
         </div>

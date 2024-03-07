@@ -16,6 +16,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DemoNgZorroAntdModule } from '../shared/ng-zorro-antd.module';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { AdsBarComponent } from '../components/ads-bar/ads-bar.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { SearchComponent } from './search/search.component';
+import { AppBarComponent } from '../components/app-bar/app-bar.component';
 
 
 
@@ -32,7 +35,10 @@ import { AdsBarComponent } from '../components/ads-bar/ads-bar.component';
     EventsComponent,
     NavBarComponent,
     SidebarComponent,
-    AdsBarComponent
+    AdsBarComponent,
+    MyProfileComponent,
+    SearchComponent,
+    AppBarComponent
   ],
   imports: [
     CommonModule,
