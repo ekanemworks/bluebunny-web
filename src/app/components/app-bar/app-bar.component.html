@@ -1,1 +1,21 @@
-<p>app-bar works!</p>
+<section>
+    <nz-page-header class="site-page-header" style="width: 100%; border-radius: 20px; ">
+      <nz-page-header-title >{{title}}</nz-page-header-title>
+      <nz-page-header-extra  *ngIf="showFilterBtn">
+        <nz-space>
+          <button *nzSpaceItem nz-button class="btn-class-1" style="border-radius: 5px;" (click)="onClick()">
+            Search
+            <span nz-icon nzType="search" nzTheme="outline"></span>
+          </button>
+        </nz-space>
+      </nz-page-header-extra>
+      <nz-page-header-extra  *ngIf="showUpdateProfileBtn">
+        <nz-space>
+          <button *nzSpaceItem nz-button class="btn-class-1" [nzType]="'primary'" style="font-weight: bold; border-radius: 5px;" (click)="onClick()">
+            Save Changes
+          </button>
+        </nz-space>
+      </nz-page-header-extra>
+      
+    </nz-page-header>
+</section>

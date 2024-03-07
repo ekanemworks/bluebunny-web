@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-app-bar',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-bar.component.scss']
 })
 export class AppBarComponent {
+  @Input()
+  title!: string;
 
+  @Input()
+  showFilterBtn!: boolean;
+  
+  @Input()
+  showUpdateProfileBtn!: boolean
+  
+  @Output() btnClick = new EventEmitter();
+
+  onClick() {
+		this.btnClick.emit();
+	}
+  
 }
