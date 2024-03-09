@@ -1,1 +1,18 @@
 <app-app-bar title="Message"></app-app-bar>
+<section>
+    <div *ngFor="let data of chats_list">
+        <div style="display: flex; margin: 5px; cursor: pointer;" (click)="openMessgaPage(data.channelId)">
+            <div style="padding: 8px;">
+                <img src="../../../assets/test-img.jpeg"  alt="">
+            </div>
+            <div style="padding: 8px; border-bottom: 1px solid #eee; flex: 3;">
+                <div style="font-weight: bold;">
+                    {{data.name}}
+                </div>
+                <div style="font-weight: 400; color: #777;">
+                    {{data.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -19,6 +19,8 @@ import { AdsBarComponent } from '../components/ads-bar/ads-bar.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { SearchComponent } from './search/search.component';
 import { AppBarComponent } from '../components/app-bar/app-bar.component';
+import { LikesMeComponent } from './likes-me/likes-me.component';
+import { MessagePageComponent } from './message-page/message-page.component';
 
 
 
@@ -38,7 +40,9 @@ import { AppBarComponent } from '../components/app-bar/app-bar.component';
     AdsBarComponent,
     MyProfileComponent,
     SearchComponent,
-    AppBarComponent
+    AppBarComponent,
+    LikesMeComponent,
+    MessagePageComponent
   ],
   imports: [
     CommonModule,

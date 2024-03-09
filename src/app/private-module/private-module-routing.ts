@@ -11,6 +11,8 @@ import { SetupComponent } from './setup/setup.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { SearchComponent } from './search/search.component';
+import { LikesMeComponent } from './likes-me/likes-me.component';
+import { MessagePageComponent } from './message-page/message-page.component';
 
 
 const routes: Routes = [
@@ -22,11 +24,13 @@ const routes: Routes = [
         {path:'events', component: EventsComponent,},
         {path:'match-making', component: MatchMakingComponent,},
         {path:'messages', component: MessagesComponent,},
+        {path:'message-page', component: MessagePageComponent,},
         {path:'preference', component: PreferenceComponent,},
         {path:'setup', component: SetupComponent,},
         {path:'subscription', component: SubscriptionComponent,},
         {path:'my-profile', component: MyProfileComponent,},
         {path:'search', component: SearchComponent,},
+        {path:'likedby', component: LikesMeComponent,},
     ]
     }
 ];

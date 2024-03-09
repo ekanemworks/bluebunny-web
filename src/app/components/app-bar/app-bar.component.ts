@@ -14,6 +14,10 @@ export class AppBarComponent {
   
   @Input()
   showUpdateProfileBtn!: boolean
+
+
+  @Input()
+  isReversable!: boolean
   
   @Output() btnClick = new EventEmitter();
 

@@ -14,7 +14,9 @@ export class PrivateModuleComponent {
     this.resizeMain()
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resizeMain();
+  }
 
   resizeMain(){
     if (window.innerWidth < 760) {

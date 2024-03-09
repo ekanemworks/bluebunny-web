@@ -9,7 +9,7 @@ export class SidebarComponent {
 
   appResource = [
     {name: 'Matching', route: 'home', icon: 'ungroup'},
-    {name: 'Search', route: 'search', icon: 'search'},
+    {name: 'Interested', route: 'likedby', icon: 'heart'},
     {name: 'Messages', route: 'messages', icon: 'message'},
     {name: 'Subscription', route: 'subscription', icon: 'thunderbolt'},
     {name: 'Profile', route: 'my-profile', icon: 'user'},

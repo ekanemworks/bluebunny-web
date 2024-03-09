@@ -1,0 +1,16 @@
+<section style="background-color: #F1EEE9; height: 100%;">
+    <app-app-bar title="Message" [isReversable]="true"></app-app-bar>
+
+    <div *ngFor="let data of conversation">
+        <div style="display: flex; flex-direction: row-reverse;" *ngIf="data.userId == userData.sid">
+            <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #708090; color: #000; margin: 5px; max-width: 150px; width: max-content;">
+                {{data.message}}
+            </div>
+        </div>
+        <div style="display: flex;" *ngIf="data.userId != userData.sid">
+            <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #ffffff; color: #000; margin: 5px; max-width: 150px; width: max-content;">
+                {{data.message}}
+            </div>
+        </div>
+    </div>
+</section>
