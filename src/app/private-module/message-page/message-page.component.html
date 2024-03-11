@@ -1,16 +1,23 @@
-<section style="background-color: #F1EEE9; height: 100%;">
+<section style="background-color: #F1EEE9; height: 100%; display: flex; flex-direction: column;">
     <app-app-bar title="Message" [isReversable]="true"></app-app-bar>
-
-    <div *ngFor="let data of conversation">
-        <div style="display: flex; flex-direction: row-reverse;" *ngIf="data.userId == userData.sid">
-            <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #708090; color: #000; margin: 5px; max-width: 150px; width: max-content;">
-                {{data.message}}
+    <div #scrollMe style="flex: 1; overflow: auto;">
+        <div *ngFor="let data of conversation" >
+            <div style="display: flex; flex-direction: row-reverse;" *ngIf="data.userId == userData.sid">
+                <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #708090; color: #ffffff; margin: 5px; max-width: 190px; width: max-content;">
+                    {{data.message}}
+                </div>
+            </div>
+            <div style="display: flex;" *ngIf="data.userId != userData.sid">
+                <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #ffffff; color: #000; margin: 5px; max-width: 190px; width: max-content;">
+                    {{data.message}}
+                </div>
             </div>
         </div>
-        <div style="display: flex;" *ngIf="data.userId != userData.sid">
-            <div style="padding-inline: 15px; padding-block: 7px; border-radius: 10px; background: #ffffff; color: #000; margin: 5px; max-width: 150px; width: max-content;">
-                {{data.message}}
-            </div>
-        </div>
+    </div>
+    <div style="background: #fff; padding: 8px;">
+        <form  nz-form [formGroup]="newMessageForm" class="login-form" (ngSubmit)="sendMsg()" style="display: flex;">
+            <input type="text" formControlName="new_message" style=" width: 100%; border: 1px solid #ddd; border-radius: 20px; padding-block: 10px; padding-inline: 15px;" placeholder="Type here..." >
+            &nbsp;<button nz-button nzSize="large" nzShape="circle"><span nz-icon nzType="send" ></span></button>
+        </form>
     </div>
 </section>

@@ -13,6 +13,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { SearchComponent } from './search/search.component';
 import { LikesMeComponent } from './likes-me/likes-me.component';
 import { MessagePageComponent } from './message-page/message-page.component';
+import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
         {path:'setup', component: SetupComponent,},
         {path:'subscription', component: SubscriptionComponent,},
         {path:'my-profile', component: MyProfileComponent,},
+        {path:'my-profile-edit', component: MyProfileEditComponent,},
         {path:'search', component: SearchComponent,},
         {path:'likedby', component: LikesMeComponent,},
     ]

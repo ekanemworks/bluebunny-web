@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class PrivateModuleComponent {
 
   isMobileView: boolean = false;
+  pri_style = 'padding-top: 40px; padding-left: 40px; padding-right: 40px;';
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -21,8 +22,10 @@ export class PrivateModuleComponent {
   resizeMain(){
     if (window.innerWidth < 760) {
       this.isMobileView = true;
+      this.pri_style = 'padding:0px';
     } else {
       this.isMobileView = false;
+      this.pri_style = 'padding-top: 40px; padding-left: 40px; padding-right: 40px;';
     }
   }
 

@@ -21,6 +21,7 @@ import { SearchComponent } from './search/search.component';
 import { AppBarComponent } from '../components/app-bar/app-bar.component';
 import { LikesMeComponent } from './likes-me/likes-me.component';
 import { MessagePageComponent } from './message-page/message-page.component';
+import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
 
 
 
@@ -42,7 +43,8 @@ import { MessagePageComponent } from './message-page/message-page.component';
     SearchComponent,
     AppBarComponent,
     LikesMeComponent,
-    MessagePageComponent
+    MessagePageComponent,
+    MyProfileEditComponent
   ],
   imports: [
     CommonModule,
