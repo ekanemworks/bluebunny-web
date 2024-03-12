@@ -6,8 +6,8 @@
                     <div style="width: 180px;" *ngIf="!isMobileView">
                         <app-sidebar></app-sidebar>
                     </div>
-                    <div *ngIf="isMobileView" style="flex: 1; height: 100vh; display: flex;  flex-direction: column">
-                        <div style="height: 100%; border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
+                    <div *ngIf="isMobileView" style="flex: 1; display: flex;  flex-direction: column">
+                        <div style="height: 92vh; overflow: auto; border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
                             <router-outlet></router-outlet>
                         </div>
                         <div >

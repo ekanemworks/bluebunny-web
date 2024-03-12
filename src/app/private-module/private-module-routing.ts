@@ -31,6 +31,7 @@ const routes: Routes = [
         {path:'subscription', component: SubscriptionComponent,},
         {path:'my-profile', component: MyProfileComponent,},
         {path:'my-profile-edit', component: MyProfileEditComponent,},
+        {path:'preference', component: PreferenceComponent,},
         {path:'search', component: SearchComponent,},
         {path:'likedby', component: LikesMeComponent,},
     ]
