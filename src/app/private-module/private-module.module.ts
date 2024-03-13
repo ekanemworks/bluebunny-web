@@ -22,6 +22,7 @@ import { AppBarComponent } from '../components/app-bar/app-bar.component';
 import { LikesMeComponent } from './likes-me/likes-me.component';
 import { MessagePageComponent } from './message-page/message-page.component';
 import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
+import { MatchCardComponent } from '../components/match-card/match-card.component';
 
 
 
@@ -44,7 +45,8 @@ import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.compon
     AppBarComponent,
     LikesMeComponent,
     MessagePageComponent,
-    MyProfileEditComponent
+    MyProfileEditComponent,
+    MatchCardComponent
   ],
   imports: [
     CommonModule,

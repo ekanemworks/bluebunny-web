@@ -51,66 +51,66 @@ export class MessagePageComponent implements OnInit {
         message: "Yes i am",
         userId:  2
       },
-      {
-        message: "So when do we star?",
-        userId:  1
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
-      {
-        message: "Now",
-        userId:  2
-      },
+      // {
+      //   message: "So when do we star?",
+      //   userId:  1
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
+      // {
+      //   message: "Now",
+      //   userId:  2
+      // },
     ]
     // throw new Error('Method not implemented.');
   }
