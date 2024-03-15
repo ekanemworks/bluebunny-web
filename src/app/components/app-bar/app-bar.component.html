@@ -1,4 +1,4 @@
-<section style="color: #fff;">
+<section style="background: #000; color: #fff;">
     <nz-page-header *ngIf="isReversable" class="site-page-header" style="width: 100%; border-radius: 20px; " nzBackIcon="arrow-left">
       <nz-page-header-title >{{title}}</nz-page-header-title>
       <nz-page-header-extra  *ngIf="showFilterBtn">
@@ -18,6 +18,8 @@
       </nz-page-header-extra>
       
     </nz-page-header>
+</section>
+<section style="color: #fff;">
 
     <nz-page-header *ngIf="!isReversable" class="site-page-header" style="width: 100%; border-radius: 20px; " >
       <nz-page-header-title >{{title}}</nz-page-header-title>

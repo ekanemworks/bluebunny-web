@@ -3,3 +3,11 @@ img{
     height: 55px;
     border-radius: 50%;
 }
+
+.msg-tile{
+    display: flex; margin: 5px; cursor: pointer;
+}
+
+.msg-tile:hover{
+    background: #222;
+}

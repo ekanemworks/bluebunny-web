@@ -23,6 +23,7 @@ import { LikesMeComponent } from './likes-me/likes-me.component';
 import { MessagePageComponent } from './message-page/message-page.component';
 import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
 import { MatchCardComponent } from '../components/match-card/match-card.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 
@@ -46,7 +47,8 @@ import { MatchCardComponent } from '../components/match-card/match-card.componen
     LikesMeComponent,
     MessagePageComponent,
     MyProfileEditComponent,
-    MatchCardComponent
+    MatchCardComponent,
+    ViewProfileComponent
   ],
   imports: [
     CommonModule,

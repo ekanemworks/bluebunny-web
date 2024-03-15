@@ -34,18 +34,48 @@ export class DashboardComponent implements OnInit {
         profileName: "John Doe",
         imageArray: ['../../assets/test-img.jpeg'],
         dateOfBirth:"12-10-1997",
+        school:'Unilag',
+        workPlace:'Zenith Bank',
         stateName:'Lagos'
       },
       {
         profileName: "Tobe Ekanem",
-        imageArray: ['../../assets/test-img2.jpeg'],
+        imageArray: ['../../assets/test-img3.jpeg'],
         dateOfBirth:"12-10-1996",
+        school:'Covenant University',
+        workPlace:'Paystack',
+        stateName:'Ogun State'
+      },
+      {
+        profileName: "Raphael",
+        imageArray: ['../../assets/test-img4.jpeg'],
+        dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
+        stateName:'Abuja'
+      },
+      {
+        profileName: "Tobe Ekanem",
+        imageArray: ['../../assets/test-img5.jpeg'],
+        dateOfBirth:"12-10-1996",
+        school:'Covenant University',
+        workPlace:'Paystack',
         stateName:'Ogun'
       },
       {
         profileName: "Raphael",
-        imageArray: ['../../assets/test-img3.jpeg'],
+        imageArray: ['../../assets/test-img6.jpeg'],
         dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
+        stateName:'Abuja'
+      },
+      {
+        profileName: "Raphael",
+        imageArray: ['../../assets/test-img7.jpeg'],
+        dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
         stateName:'Abuja'
       }
     ]
@@ -97,7 +127,7 @@ export class DashboardComponent implements OnInit {
           clearInterval(timer);
           this.nextAgent();
       }
-    }, 500);
+    }, 200);
   } 
 
 

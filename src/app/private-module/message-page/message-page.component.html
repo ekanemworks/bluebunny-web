@@ -1,4 +1,4 @@
-<section style="background-color: #F1EEE9; height: 100%; display: flex; flex-direction: column;">
+<section style="background-color: #333; height: 100%; display: flex; flex-direction: column;">
     <app-app-bar title="Message" [isReversable]="true"></app-app-bar>
     <div #scrollMe style="flex: 1; overflow: auto;">
         <div *ngFor="let data of conversation" >
@@ -14,10 +14,10 @@
             </div>
         </div>
     </div>
-    <div style="background: #fff; padding: 8px;">
+    <div style="background: #000; padding: 8px;">
         <form  nz-form [formGroup]="newMessageForm" class="login-form" (ngSubmit)="sendMsg()" style="display: flex;">
-            <input type="text" formControlName="new_message" style=" width: 100%; border: 1px solid #ddd; border-radius: 20px; padding-block: 10px; padding-inline: 15px;" placeholder="Type here..." >
-            &nbsp;<button nz-button nzSize="large" nzShape="circle"><span nz-icon nzType="send" ></span></button>
+            <input type="text" formControlName="new_message" style=" width: 100%; border: 1px solid #444; border-radius: 20px; padding-block: 10px; padding-inline: 15px; background: #000; color: #fff;" placeholder="Type here..." >
+            &nbsp;<button nz-button nzType="primary" nzSize="large" nzShape="circle"><span nz-icon nzType="send" ></span></button>
         </form>
     </div>
 </section>

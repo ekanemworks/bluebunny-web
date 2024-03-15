@@ -1,12 +1,12 @@
 <app-app-bar title="Message"></app-app-bar>
 <section>
     <div *ngFor="let data of chats_list">
-        <div style="display: flex; margin: 5px; cursor: pointer;" (click)="openMessgaPage(data.channelId)">
+        <div class="msg-tile" (click)="openMessgaPage(data.channelId)">
             <div style="padding: 8px;">
                 <img src="../../../assets/test-img.jpeg"  alt="">
             </div>
-            <div style="padding: 8px; border-bottom: 1px solid #eee; flex: 3;">
-                <div style="font-weight: bold;">
+            <div style="padding: 8px; border-bottom: 1px solid #222; flex: 3;">
+                <div style="font-weight: bold; color: #fff;" >
                     {{data.name}}
                 </div>
                 <div style="font-weight: 400; color: #777;">
