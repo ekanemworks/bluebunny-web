@@ -5,21 +5,21 @@
     <div style="flex: 1; margin: auto; border-radius: 20px; width: 100%; ">
         <div style="max-width: 440px; margin: auto; height: 100%;  display: flex; flex-direction: column; gap: 10px;">
             <div style="margin-inline: 20px; flex: 1;">
-                <div style="height: 100%; border: 1px solid #ddd; border-radius: 20px;  display: flex; flex-direction: column; padding: 10px; background: url('../../assets/test-img.jpeg') no-repeat center / cover;">
+                <div style="height: 100%; border: 1px solid #ddd; border-radius: 20px;  display: flex; flex-direction: column; padding: 10px; background: url('{{splitImg(active_feed.imageArray)}}') no-repeat center / cover;">
                     <div style="flex: 1; display: flex; justify-content: center;  align-items:center;">
-                        <div style="color: rgb(210, 10, 10); font-size: 30px; width: fit-content; border-radius: 30px; padding-inline: 20px; border: 5px solid rgb(210, 10, 10); background: #f5f5f5;">
+                        <div *ngIf="choice.dislike" style="color: rgb(210, 10, 10); font-size: 30px; width: fit-content; border-radius: 30px; padding-inline: 20px; border: 5px solid rgb(210, 10, 10); background: #f5f5f5;">
                             NOPE
                         </div>
-                        <div style="color: rgb(10, 210, 40); font-size: 30px; width: fit-content; border-radius: 30px; padding-inline: 20px; border: 5px solid rgb(10, 210, 40); background: #f5f5f5;">
+                        <div *ngIf="choice.like" style="color: rgb(10, 210, 40); font-size: 30px; width: fit-content; border-radius: 30px; padding-inline: 20px; border: 5px solid rgb(10, 210, 40); background: #f5f5f5;">
                             LIKE
                         </div>
                     </div>
                     <div style="padding: 10px; background: #0e0e0eaa; border-radius: 15px; margin: 10px;">
                         <div style="color: #fff; font-weight: bold;">
-                            Name, 24
+                            {{active_feed.profileName}}, {{calculateAgeFromDOB(active_feed.dateOfBirth)}}
                         </div>
                         <div style="color: #fff; font-weight:normal;">
-                            Lagos
+                            {{active_feed.stateName}}
                         </div>
                     </div>
                 </div>
@@ -29,17 +29,17 @@
                 <table>
                     <tr>
                         <td style="width: 1000px;">
-                            <div class="match_button dislike_btn">
+                            <div class="match_button dislike_btn" (click)="dislike_feed()">
                                 <span nz-icon nzType="close" nzTheme="outline"></span>
                             </div>
                         </td>
                         <td style="width: 1000px;">
-                            <div class="match_button subscribe_btn">
+                            <div class="match_button subscribe_btn" (click)="initiateChat()">
                                 <span nz-icon nzType="thunderbolt" nzTheme="fill"></span>
                             </div>
                         </td>
                         <td style="width: 1000px;">
-                            <div class="match_button like_btn">
+                            <div class="match_button like_btn" (click)="like_feed()">
                                 <span nz-icon nzType="heart" nzTheme="fill"></span>
                             </div>
                         </td>
