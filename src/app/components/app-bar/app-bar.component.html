@@ -16,6 +16,13 @@
           </button>
         </nz-space>
       </nz-page-header-extra>
+      <nz-page-header-extra *ngIf="showMyProfileBtn" routerLink="/account/my-profile" >
+        <nz-space>
+          <div style="color: #fff;" >
+            <span nz-icon nzType="user" nzTheme="outline"></span> My profile
+          </div>
+        </nz-space>
+      </nz-page-header-extra>
       
     </nz-page-header>
 </section>
@@ -30,16 +37,18 @@
           </button>
         </nz-space>
       </nz-page-header-extra>
-      <nz-page-header-extra routerLink="/account/my-profile" >
+      <nz-page-header-extra *ngIf="showMyProfileBtn" routerLink="/account/my-profile" >
         <nz-space>
           <div style="color: #fff;" >
             <span nz-icon nzType="user" nzTheme="outline"></span> My profile
           </div>
         </nz-space>
       </nz-page-header-extra>
-      <nz-page-header-extra *ngIf="showCloseBtn" >
+      <nz-page-header-extra *ngIf="showCloseBtn" (click)="onClick()">
         <nz-space>
-          <button nz-button nzSize="large" nzShape="circle" (click)="onClick()"><span nz-icon nzType="close" ></span></button>
+          <div style="color: #fff; font-size: 25px; cursor: pointer;" >
+            <span nz-icon nzType="close" ></span>
+          </div>
         </nz-space>
       </nz-page-header-extra>
       

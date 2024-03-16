@@ -1,7 +1,7 @@
 
 
 <section style="height: 100%; display: flex; flex-direction: column;" *ngIf="isViewMatch">
-    <app-app-bar title="AceMash" ></app-app-bar>
+    <app-app-bar title="AceMash" [showMyProfileBtn]="isMobileView"></app-app-bar>
     <div style="flex: 1; margin: auto; border-radius: 20px; width: 100%; ">
         <div style="max-width: 440px; margin: auto; height: 100%;  display: flex; flex-direction: column; gap: 10px;">
             <div style="margin-inline: 20px; flex: 1;">

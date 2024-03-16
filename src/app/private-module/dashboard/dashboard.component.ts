@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzModalService } from 'ng-zorro-antd/modal';
@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   active_feed: any;
   activeIndex: number = 0;
   isViewMatch: boolean = true;
+  isMobileView: boolean = false;
 
   choice = {
     like: false,
@@ -31,7 +32,21 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
 
     this.matchFeed();
+    this.resizeMain()
+  }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.resizeMain()
+  }
+
+
+  resizeMain(){
+    if (window.innerWidth < 760) {
+      this.isMobileView = true;
+    } else {
+      this.isMobileView = false;
+    }
   }
 
 
