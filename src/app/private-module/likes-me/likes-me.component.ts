@@ -18,34 +18,92 @@ export class LikesMeComponent implements OnInit{
     // this.loading=true;
     this.interested_list=[
       {
-      profile_name:'Michael',
-      date_of_birth:'23-07-1997',
-      profile_pic:'23-07-1997',
-      state_location:'Lagos',
-      profession:'Doctor',
-      },{
-        profile_name:'Michael',
-        date_of_birth:'23-07-1997',
-        profile_pic:'23-07-1997',
-        state_location:'Lagos',
-        profession:'Doctor',
-      },{
-        profile_name:'Michael',
-        date_of_birth:'23-07-1997',
-        profile_pic:'23-07-1997',
-        state_location:'Lagos',
-        profession:'Doctor',
-      },{
-        profile_name:'Michael',
-        date_of_birth:'23-07-1997',
-        profile_pic:'23-07-1997',
-        state_location:'Lagos',
-        profession:'Doctor',
+        userCode: "123456789",
+        profileName: "John Doe",
+        imageArray: ['../../assets/test-img.jpeg'],
+        dateOfBirth:"12-10-1997",
+        school:'Unilag',
+        workPlace:'Zenith Bank',
+        stateName:'Lagos'
+      },
+      {
+        userCode: "123456789",
+        profileName: "Tobe Ekanem",
+        imageArray: ['../../assets/test-img3.jpeg'],
+        dateOfBirth:"12-10-1996",
+        school:'Covenant University',
+        workPlace:'Paystack',
+        stateName:'Ogun State'
+      },
+      {
+        userCode: "123456789",
+        profileName: "Raphael",
+        imageArray: ['../../assets/test-img4.jpeg'],
+        dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
+        stateName:'Abuja'
+      },
+      {
+        userCode: "123456789",
+        profileName: "Tobe Ekanem",
+        imageArray: ['../../assets/test-img5.jpeg'],
+        dateOfBirth:"12-10-1996",
+        school:'Covenant University',
+        workPlace:'Paystack',
+        stateName:'Ogun'
+      },
+      {
+        userCode: "123456789",
+        profileName: "Raphael",
+        imageArray: ['../../assets/test-img6.jpeg'],
+        dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
+        stateName:'Abuja'
+      },
+      {
+        userCode: "123456789",
+        profileName: "Raphael",
+        imageArray: ['../../assets/test-img7.jpeg'],
+        dateOfBirth:"12-10-1999",
+        school:'Bowen University',
+        workPlace:'Interswitch',
+        stateName:'Abuja'
       }
     ]
 
     console.log(this.interested_list.length);
     
   }
+
+  calculateAgeFromDOB(date_of_birth:any){
+    // Parse the input date string into a Date object
+   const dob: Date = new Date(date_of_birth);
+   
+   // Get the current date
+   const currentDate: Date = new Date();
+
+   // Calculate the difference in years between current date and birth year
+   const age: number = currentDate.getFullYear() - dob.getFullYear();
+
+   // Check if the birthday has occurred this year or not
+   const hasBirthdayOccurred: boolean =
+     currentDate.getMonth() > dob.getMonth() ||
+     (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() >= dob.getDate());
+
+   // If birthday hasn't occurred this year, subtract 1 from the age
+   return hasBirthdayOccurred ? age : age - 1;
+ }
+
+ splitImg(imageArrString:any){
+    console.log(imageArrString);
+    
+    // let imgArr =  JSON.parse(imageArrString)
+    // console.log(imgArr);
+    // let img = imgArr[0];
+    return imageArrString[0];
+  }
+
 
 }
