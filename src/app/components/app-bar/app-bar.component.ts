@@ -15,6 +15,9 @@ export class AppBarComponent {
   @Input()
   showUpdateProfileBtn!: boolean
 
+  @Input()
+  showCloseBtn!: boolean;
+
 
   @Input()
   isReversable!: boolean

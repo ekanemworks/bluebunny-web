@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd/message';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { ModalSubscriptionInformationComponent } from 'src/app/components/modals/modal-subscription-information/modal-subscription-information.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,13 +16,16 @@ export class DashboardComponent implements OnInit {
   match_feed_list: any[]=[];
   active_feed: any;
   activeIndex: number = 0;
+  isViewMatch: boolean = true;
 
   choice = {
     like: false,
     dislike: false
   }
 
-  constructor() {}
+  constructor(private router: Router, 
+    private modalService:NzModalService,
+    private popMessage: NzMessageService,) {}
 
 
   ngOnInit(): void {
@@ -31,6 +38,7 @@ export class DashboardComponent implements OnInit {
   matchFeed(){
     this.match_feed_list = [
       {
+        userCode: "123456789",
         profileName: "John Doe",
         imageArray: ['../../assets/test-img.jpeg'],
         dateOfBirth:"12-10-1997",
@@ -39,6 +47,7 @@ export class DashboardComponent implements OnInit {
         stateName:'Lagos'
       },
       {
+        userCode: "123456789",
         profileName: "Tobe Ekanem",
         imageArray: ['../../assets/test-img3.jpeg'],
         dateOfBirth:"12-10-1996",
@@ -47,6 +56,7 @@ export class DashboardComponent implements OnInit {
         stateName:'Ogun State'
       },
       {
+        userCode: "123456789",
         profileName: "Raphael",
         imageArray: ['../../assets/test-img4.jpeg'],
         dateOfBirth:"12-10-1999",
@@ -55,6 +65,7 @@ export class DashboardComponent implements OnInit {
         stateName:'Abuja'
       },
       {
+        userCode: "123456789",
         profileName: "Tobe Ekanem",
         imageArray: ['../../assets/test-img5.jpeg'],
         dateOfBirth:"12-10-1996",
@@ -63,6 +74,7 @@ export class DashboardComponent implements OnInit {
         stateName:'Ogun'
       },
       {
+        userCode: "123456789",
         profileName: "Raphael",
         imageArray: ['../../assets/test-img6.jpeg'],
         dateOfBirth:"12-10-1999",
@@ -71,6 +83,7 @@ export class DashboardComponent implements OnInit {
         stateName:'Abuja'
       },
       {
+        userCode: "123456789",
         profileName: "Raphael",
         imageArray: ['../../assets/test-img7.jpeg'],
         dateOfBirth:"12-10-1999",
@@ -140,11 +153,30 @@ export class DashboardComponent implements OnInit {
           clearInterval(timer);
           this.nextAgent();
       }
-    }, 500);
+    }, 200);
+  }
+
+  bookmark(){
+
+    this.popMessage.success("Bookmarked!");
+    
   }
 
   initiateChat(){
-    
+    const modal = this.modalService.create({
+      nzTitle: 'Activate DM',
+      nzContent: ModalSubscriptionInformationComponent,
+      nzFooter: null, // If you want to customize the footer, provide a template or component here
+    });
+  
+    modal.afterClose.subscribe((result: any) => {
+
+      // if (result) {
+      //   this.fetchFiltedFeed(result)
+      //   this.filterParameters = result;
+      // }
+      
+    });
   }
 
 
@@ -182,6 +214,15 @@ export class DashboardComponent implements OnInit {
    return hasBirthdayOccurred ? age : age - 1;
  }
 
+
+ viewProfile(userCode: any){
+  this.isViewMatch = false;
+  // this.router.navigate(['/account/view-profile'], { queryParams: {userCode: userCode} })
+ }
+
+ closeViewProfile(){
+  this.isViewMatch = true;
+ }
 
 
 

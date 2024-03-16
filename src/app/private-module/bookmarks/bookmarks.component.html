@@ -1,0 +1,26 @@
+<app-app-bar title="Bookmarks"></app-app-bar>
+
+<section style="padding: 10px;">
+    <nz-row *ngIf="!loading" [nzGutter]="10">
+      
+        <!-- Three Cards for Large Screens -->
+        <nz-col nzXs="12" nzMd="12" nzLg="8" *ngFor="let data of interested_list">
+            <!-- <div style="height: 100px; width: 100px; border: 1px solid #ddd;">
+
+            </div> -->
+            <div style="height: 200px; margin-bottom: 10px; border-radius: 4px;  background: url('../../assets/test-img.jpeg') no-repeat center / cover; color: #ddd; display: flex; flex-direction: column;">
+                <div style="flex: 1;">
+
+                </div>
+                <div>
+                    Name, Age
+                </div>
+                <div>
+                    <span nz-icon nzType="aim" nzTheme="outline"></span> Location
+                </div>
+            </div>
+
+        </nz-col>
+    
+    </nz-row>
+</section>

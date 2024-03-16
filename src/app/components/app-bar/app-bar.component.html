@@ -20,7 +20,6 @@
     </nz-page-header>
 </section>
 <section style="color: #fff;">
-
     <nz-page-header *ngIf="!isReversable" class="site-page-header" style="width: 100%; border-radius: 20px; " >
       <nz-page-header-title >{{title}}</nz-page-header-title>
       <nz-page-header-extra  *ngIf="showFilterBtn">
@@ -31,11 +30,16 @@
           </button>
         </nz-space>
       </nz-page-header-extra>
-      <nz-page-header-extra  *ngIf="showUpdateProfileBtn">
+      <nz-page-header-extra routerLink="/account/my-profile" >
         <nz-space>
-          <button *nzSpaceItem nz-button class="btn-class-1" [nzType]="'primary'" style="font-weight: bold; border-radius: 5px;" (click)="onClick()">
-            Save Changes
-          </button>
+          <div style="color: #fff;" >
+            <span nz-icon nzType="user" nzTheme="outline"></span> My profile
+          </div>
+        </nz-space>
+      </nz-page-header-extra>
+      <nz-page-header-extra *ngIf="showCloseBtn" >
+        <nz-space>
+          <button nz-button nzSize="large" nzShape="circle" (click)="onClick()"><span nz-icon nzType="close" ></span></button>
         </nz-space>
       </nz-page-header-extra>
       

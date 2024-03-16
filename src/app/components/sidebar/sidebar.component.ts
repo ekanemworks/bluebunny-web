@@ -11,7 +11,7 @@ export class SidebarComponent {
     {name: 'Matching', route: 'home', icon: 'ungroup'},
     {name: 'Interested', route: 'likedby', icon: 'heart'},
     {name: 'Messages', route: 'messages', icon: 'message'},
-    {name: 'Subscription', route: 'subscription', icon: 'thunderbolt'},
+    {name: 'Bookmark', route: 'bookmark', icon: 'book'},
     {name: 'Profile', route: 'my-profile', icon: 'user'},
     // {name: 'Settings', route: 'account/home', icon: 'ungroup'},
   ]

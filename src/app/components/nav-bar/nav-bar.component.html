@@ -1,28 +1,10 @@
 <main style="text-align: center; font-size: 12px; color: #fff;">
     <div nz-row>
-        <div nz-col [nzSpan]="6" nzMatchRouter  routerLink="home" class="nav-btn">
+        <div *ngFor="let data of appResource" nz-col [nzSpan]="6" nzMatchRouter  [routerLink]="data.route" class="nav-btn">
             <div>
-                <span nz-icon nzType="ungroup" nzTheme="outline" class="nav-bar-icon"></span>
+                <span nz-icon [nzType]="data.icon" nzTheme="outline" class="nav-bar-icon"></span>
             </div>
-            Matching
-        </div>
-        <div nz-col [nzSpan]="6" routerLink="likedby" class="nav-btn">
-            <div>
-                <span nz-icon nzType="heart" nzTheme="outline" class="nav-bar-icon"></span>
-            </div>
-            Interested
-        </div>
-        <div nz-col [nzSpan]="6" routerLink="messages" class="nav-btn">
-            <div>
-                <span nz-icon nzType="message" nzTheme="outline" class="nav-bar-icon"></span>
-            </div>
-            Messages
-        </div>
-        <div nz-col [nzSpan]="6" routerLink="subscription" class="nav-btn">
-            <div>
-                <span nz-icon nzType="thunderbolt" nzTheme="outline" class="nav-bar-icon"></span>
-            </div>
-            Subscription
+            {{data.name}}
         </div>
     </div>
 </main>

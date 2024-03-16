@@ -24,6 +24,7 @@ import { MessagePageComponent } from './message-page/message-page.component';
 import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
 import { MatchCardComponent } from '../components/match-card/match-card.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 
 
 
@@ -48,7 +49,8 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
     MessagePageComponent,
     MyProfileEditComponent,
     MatchCardComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    BookmarksComponent
   ],
   imports: [
     CommonModule,

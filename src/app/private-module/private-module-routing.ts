@@ -15,6 +15,7 @@ import { LikesMeComponent } from './likes-me/likes-me.component';
 import { MessagePageComponent } from './message-page/message-page.component';
 import { MyProfileEditComponent } from './my-profile-edit/my-profile-edit.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path: '', component: PrivateModuleComponent, children:[
         {path:'', redirectTo: '/account/home', pathMatch: 'full'},
         {path:'home', component: DashboardComponent},
+        {path:'bookmark', component: BookmarksComponent},
         {path:'verify-email', component: EmailVerificationComponent,},
         {path:'events', component: EventsComponent,},
         {path:'match-making', component: MatchMakingComponent,},

@@ -1,6 +1,6 @@
 
 
-<section style="height: 100%; display: flex; flex-direction: column;">
+<section style="height: 100%; display: flex; flex-direction: column;" *ngIf="isViewMatch">
     <app-app-bar title="AceMash" ></app-app-bar>
     <div style="flex: 1; margin: auto; border-radius: 20px; width: 100%; ">
         <div style="max-width: 440px; margin: auto; height: 100%;  display: flex; flex-direction: column; gap: 10px;">
@@ -20,7 +20,7 @@
                                 {{active_feed.profileName}}, {{calculateAgeFromDOB(active_feed.dateOfBirth)}}
                             </div>
                             <div>
-                                <div style="color: #fff; background: rgb(215, 184, 8); padding-inline: 10px; padding-block: 3px; border-radius: 5px; font-size: 12px; font-weight: normal;">
+                                <div style="color: #fff; background: rgb(215, 184, 8); padding-inline: 10px; padding-block: 3px; border-radius: 5px; font-size: 12px; font-weight: normal; cursor: pointer;" (click)="viewProfile(active_feed)">
                                     show profile
                                 </div>
                             </div>
@@ -42,8 +42,13 @@
                             </div>
                         </td>
                         <td style="width: 1000px;">
-                            <div class="match_button subscribe_btn" (click)="initiateChat()">
-                                <span nz-icon nzType="thunderbolt" nzTheme="fill"></span>
+                            <div class="match_button_2 bookmark_btn" (click)="bookmark()">
+                                <span nz-icon nzType="book" nzTheme="outline"></span>
+                            </div>
+                        </td>
+                        <td style="width: 1000px;">
+                            <div class="match_button_2 message_btn" (click)="initiateChat()">
+                                <span nz-icon nzType="wechat" nzTheme="fill"></span>
                             </div>
                         </td>
                         <td style="width: 1000px;">
@@ -56,4 +61,7 @@
             </div>
         </div>
     </div>
+</section>
+<section *ngIf="!isViewMatch">
+    <app-view-profile (btnClick)="closeViewProfile()" [profileData]="active_feed"></app-view-profile>
 </section>
