@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-likes-me',
@@ -10,8 +10,15 @@ export class LikesMeComponent implements OnInit{
   loading: boolean = false;
   interested_list: any[]=[];
 
+  exposed_List: any[]=[];
+
+  active_feed: any;
+  activeIndex: number = 0;
+  isViewMatch: boolean = true;
+  
   ngOnInit(): void {
     this.getInterestedList();
+    this.resizeMain();
   }
 
   getInterestedList(){
@@ -73,7 +80,9 @@ export class LikesMeComponent implements OnInit{
       }
     ]
 
-    console.log(this.interested_list.length);
+
+
+
     
   }
 
@@ -105,5 +114,30 @@ export class LikesMeComponent implements OnInit{
     return imageArrString[0];
   }
 
+
+ viewProfile(profileData: any){
+  this.isViewMatch = false;
+  // this.router.navigate(['/account/view-profile'], { queryParams: {userCode: userCode} })
+ }
+
+  closeViewProfile(){
+    this.isViewMatch = true;
+   }
+  
+   isMobileView: boolean = false;
+
+   @HostListener('window:resize', ['$event'])
+   onResize(event: Event): void {
+     this.resizeMain()
+   }
+ 
+ 
+   resizeMain(){
+     if (window.innerWidth < 760) {
+       this.isMobileView = true;
+     } else {
+       this.isMobileView = false;
+     }
+   }
 
 }

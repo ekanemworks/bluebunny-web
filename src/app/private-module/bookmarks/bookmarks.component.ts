@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-bookmarks',
@@ -12,6 +12,7 @@ export class BookmarksComponent {
 
   ngOnInit(): void {
     this.getInterestedList();
+    this.resizeMain();
   }
 
   getInterestedList(){
@@ -46,6 +47,22 @@ export class BookmarksComponent {
 
     console.log(this.interested_list.length);
     
+  }
+
+  isMobileView: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.resizeMain()
+  }
+
+
+  resizeMain(){
+    if (window.innerWidth < 760) {
+      this.isMobileView = true;
+    } else {
+      this.isMobileView = false;
+    }
   }
 
 }

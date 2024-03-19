@@ -24,6 +24,16 @@ export class WebService {
 
 
 
+  splitImg(imageArrString:any){
+    console.log(imageArrString);
+    
+    // let imgArr =  JSON.parse(imageArrString)
+    // console.log(imgArr);
+    // let img = imgArr[0];
+    return imageArrString[0];
+  }
+
+
 
   // TERRITORIES API
   // TERRITORIES API

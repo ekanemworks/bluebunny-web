@@ -19,3 +19,26 @@
     color: #fff !important;
     cursor: pointer;
 }
+
+.ant-tabs {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff !important;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    display: flex;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #c6c008;
+    text-shadow: 0 0 0.25px currentcolor;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+    color: #1890ff;
+    background: #ff0606;
+}

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   appResource = [
-    {name: 'Matching', route: 'home', icon: 'ungroup'},
+    {name: 'Home', route: 'home', icon: 'ungroup'},
     {name: 'Likes Me', route: 'likedby', icon: 'heart'},
     {name: 'Messages', route: 'messages', icon: 'message'},
     {name: 'Bookmark', route: 'bookmark', icon: 'book'},

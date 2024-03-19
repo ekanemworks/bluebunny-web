@@ -1,4 +1,4 @@
-<app-app-bar title="Bookmarks"></app-app-bar>
+<app-app-bar title="Bookmarks"[showMyProfileBtn]="isMobileView"></app-app-bar>
 
 <section style="padding: 10px;">
     <nz-row *ngIf="!loading" [nzGutter]="10">

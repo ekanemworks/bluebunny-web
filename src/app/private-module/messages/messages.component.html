@@ -1,14 +1,6 @@
-<app-app-bar title="Message"></app-app-bar>
-<section>
-    <div>
-        <div>
-            <div style="height: 100px; width: 100px;">
+<app-app-bar title="Message" [showMyProfileBtn]="isMobileView"></app-app-bar>
 
-            </div>
-        </div>
-    </div>
-</section>
-<section>
+<section style="color: #fff;">
     <div *ngFor="let data of chats_list">
         <div class="msg-tile" (click)="openMessgaPage(data.channelId)">
             <div style="padding: 8px;">

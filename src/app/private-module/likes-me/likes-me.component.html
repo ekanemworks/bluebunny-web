@@ -1,26 +1,60 @@
-<app-app-bar title="Likes Me"></app-app-bar>
 
-<section style="padding: 10px;">
-    <nz-row *ngIf="!loading" [nzGutter]="10">
+<section style="padding: 10px;" *ngIf="isViewMatch">
+    <app-app-bar title="Likes Me" [showMyProfileBtn]="isMobileView"></app-app-bar>
+    <nz-tabset >
+        <nz-tab nzTitle="Matched">
+            <nz-row *ngIf="!loading" [nzGutter]="10">
       
-        <!-- Three Cards for Large Screens -->
-        <nz-col nzXs="12" nzMd="12" nzLg="8" *ngFor="let data of interested_list">
-            <!-- <div style="height: 100px; width: 100px; border: 1px solid #ddd;">
+                <!-- Three Cards for Large Screens -->
+                <nz-col nzXs="12" nzMd="12" nzLg="8" *ngFor="let data of interested_list">
+                    <!-- <div style="height: 100px; width: 100px; border: 1px solid #ddd;">
+        
+                    </div> -->
+                    <div (click)="viewProfile(data)" style="height: 200px; margin-bottom: 10px; border-radius: 4px;  background: url('{{splitImg(data.imageArray)}}') no-repeat center / cover; color: #ddd; display: flex; flex-direction: column;">
+                        <div style="flex: 1;">
+        
+                        </div>
+                        <div>
+                            {{data.profileName}}, {{calculateAgeFromDOB(data.dateOfBirth)}}
+                        </div>
+                        <div>
+                            <span nz-icon nzType="aim" nzTheme="outline"></span> Location
+                        </div>
+                    </div>
+        
+                </nz-col>
+            
+            </nz-row>
+        </nz-tab>
+        <nz-tab nzTitle="Likes You">
+            <nz-row *ngIf="!loading" [nzGutter]="10">
+      
+                <!-- Three Cards for Large Screens -->
+                <nz-col nzXs="12" nzMd="12" nzLg="8" *ngFor="let data of interested_list">
+                    <!-- <div style="height: 100px; width: 100px; border: 1px solid #ddd;">
+        
+                    </div> -->
+                    <div (click)="viewProfile(data)" style="height: 200px; margin-bottom: 10px; border-radius: 4px;  background: url('{{splitImg(data.imageArray)}}') no-repeat center / cover; color: #ddd; display: flex; flex-direction: column;">
+                        <div style="flex: 1;">
+        
+                        </div>
+                        <div>
+                            {{data.profileName}}, {{calculateAgeFromDOB(data.dateOfBirth)}}
+                        </div>
+                        <div>
+                            <span nz-icon nzType="aim" nzTheme="outline"></span> Location
+                        </div>
+                    </div>
+        
+                </nz-col>
+            
+            </nz-row>
+        </nz-tab>
+      </nz-tabset>
 
-            </div> -->
-            <div style="height: 200px; margin-bottom: 10px; border-radius: 4px;  background: url('{{splitImg(data.imageArray)}}') no-repeat center / cover; color: #ddd; display: flex; flex-direction: column;">
-                <div style="flex: 1;">
+   
+</section>
 
-                </div>
-                <div>
-                    {{data.profileName}}, {{calculateAgeFromDOB(data.dateOfBirth)}}
-                </div>
-                <div>
-                    <span nz-icon nzType="aim" nzTheme="outline"></span> Location
-                </div>
-            </div>
-
-        </nz-col>
-    
-    </nz-row>
+<section *ngIf="!isViewMatch">
+    <app-view-profile (btnClick)="closeViewProfile()" [profileData]="active_feed"></app-view-profile>
 </section>

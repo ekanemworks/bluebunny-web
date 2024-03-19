@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
@@ -11,7 +12,7 @@ export class MyProfileComponent implements OnInit {
   gallery_list: any[]=[];
   isMobileView: boolean = false
 
-  constructor(){
+  constructor(private router: Router){
 
   }
 
@@ -35,6 +36,10 @@ export class MyProfileComponent implements OnInit {
     } else {
       this.isMobileView = false;
     }
+  }
+
+  logout(){
+    this.router.navigate(["welcome"])
   }
 
 }

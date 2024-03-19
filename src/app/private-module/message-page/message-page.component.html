@@ -1,5 +1,5 @@
 <section style="background-color: #333; height: 100%; display: flex; flex-direction: column;">
-    <app-app-bar title="Message" [isReversable]="true"></app-app-bar>
+    <app-app-bar title="Message" [isReversable]="true" ></app-app-bar>
     <div #scrollMe style="flex: 1; overflow: auto;">
         <div *ngFor="let data of conversation" >
             <div style="display: flex; flex-direction: row-reverse;" *ngIf="data.userId == userData.sid">
